@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Delux.Services.ProductAPI.DbContexts;
+using Mango.Services.ProductAPI.DbContexts;
 using Mango.Services.ProductAPI.Models;
 using Mango.Services.ProductAPI.Models.Dtos;
 using Microsoft.EntityFrameworkCore;
