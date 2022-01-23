@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
-using Mango.Services.ProductAPI.Models;
-using Mango.Services.ProductAPI.Models.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Delux.Services.ProductAPI.Models;
+using Delux.Services.ProductAPI.Models.Dtos;
 
-namespace Mango.Services.ProductAPI
+namespace Delux.Services.ProductAPI
 {
     public class MappingConfig
     {
