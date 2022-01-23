@@ -1,14 +1,11 @@
-﻿using Mango.Services.ProductAPI.Models.Dto;
-using Mango.Services.ProductAPI.Models.Dtos;
-using Mango.Services.ProductAPI.Repository;
+﻿using Delux.Services.ProductAPI.Models.Dto;
+using Delux.Services.ProductAPI.Models.Dtos;
+using Delux.Services.ProductAPI.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Mango.Services.ProductAPI.Controllers
+
+namespace Delux.Services.ProductAPI.Controllers
 {
     [Route("api/products")]
     public class ProductAPIController : ControllerBase

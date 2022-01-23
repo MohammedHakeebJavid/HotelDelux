@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Threading.Tasks;
 
-namespace Mango.Services.ProductAPI.Models
+
+namespace Delux.Services.ProductAPI.Models
 {
     public class Product
     {

@@ -1,11 +1,5 @@
 ﻿using Delux.Web.Models;
 using Delux.Web.Services.IServices;
-using Delux.Web;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Delux.Web.Services
 {

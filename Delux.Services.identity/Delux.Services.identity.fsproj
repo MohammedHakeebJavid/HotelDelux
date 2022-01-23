@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="SD.cs" />
+    <None Include="MainModule\Account\AccountController.cs" />
+    <None Include="MainModule\Account\AccountOptions.cs" />
+    <None Include="MainModule\Account\ExternalController.cs" />
+    <None Include="MainModule\Account\ExternalProvider.cs" />
+    <None Include="MainModule\Account\LoggedOutViewModel.cs" />
+    <None Include="MainModule\Account\LoginInputModel.cs" />
+    <None Include="MainModule\Account\LoginViewModel.cs" />
+    <None Include="MainModule\Account\LogoutInputModel.cs" />
+    <None Include="MainModule\Account\LogoutViewModel.cs" />
+    <None Include="MainModule\Account\RedirectViewModel.cs" />
+    <None Include="MainModule\Account\RegisterViewModel.cs" />
+    <None Include="MainModule\Consent\ConsentController.cs" />
+    <None Include="MainModule\Consent\ConsentInputModel.cs" />
+    <None Include="MainModule\Consent\ConsentOptions.cs" />
+    <None Include="MainModule\Consent\ConsentViewModel.cs" />
+    <None Include="MainModule\Consent\ProcessConsentResult.cs" />
+    <None Include="MainModule\Consent\ScopeViewModel.cs" />
+    <None Include="MainModule\Device\DeviceAuthorizationInputModel.cs" />
+    <None Include="MainModule\Device\DeviceAuthorizationViewModel.cs" />
+    <None Include="MainModule\Device\DeviceController.cs" />
+    <None Include="MainModule\Diagnostics\DiagnosticsController.cs" />
+    <None Include="MainModule\Diagnostics\DiagnosticsViewModel.cs" />
+    <None Include="MainModule\Extensions.cs" />
+    <None Include="MainModule\Grants\GrantsController.cs" />
+    <None Include="MainModule\Grants\GrantsViewModel.cs" />
+    <None Include="MainModule\Home\ErrorViewModel.cs" />
+    <None Include="MainModule\Home\HomeController.cs" />
+    <None Include="MainModule\SecurityHeadersAttribute.cs" />
+    <None Include="MainModule\TestUsers.cs" />
+    <None Include="DbContexts\ApplicationDbContext.cs" />
+    <None Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models/ErrorViewModel.fs" />
+    <Compile Include="Controllers/HomeController.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+  <ItemGroup>
+    <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

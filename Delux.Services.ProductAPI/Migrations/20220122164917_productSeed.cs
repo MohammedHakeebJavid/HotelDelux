@@ -4,7 +4,7 @@
 
 namespace Delux.Services.ProductAPI.Migrations
 {
-    public partial class AddProdcutModelToDb : Migration
+    public partial class productSeed : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

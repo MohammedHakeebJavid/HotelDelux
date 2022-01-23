@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using Mango.Services.ProductAPI.DbContexts;
-using Mango.Services.ProductAPI.Models;
-using Mango.Services.ProductAPI.Models.Dtos;
+using Delux.Services.ProductAPI.DbContexts;
+using Delux.Services.ProductAPI.Models;
+using Delux.Services.ProductAPI.Models.Dtos;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Mango.Services.ProductAPI.Repository
+namespace Delux.Services.ProductAPI.Repository
 {
     public class ProductRepository : IProductRepository
     {

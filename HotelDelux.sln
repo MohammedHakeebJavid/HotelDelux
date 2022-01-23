@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{19B48D4E-D144-4D71-949D-90E52F018B89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delux.Web", "Delux.Web\Delux.Web.csproj", "{6AC753AF-E381-4509-A541-837B9558D933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delux.Web", "Delux.Web\Delux.Web.csproj", "{6AC753AF-E381-4509-A541-837B9558D933}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5EC3445F-F240-4C49-BA0E-939EB30EF97D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delux.Services.ProductAPI", "Delux.Services.ProductAPI\Delux.Services.ProductAPI.csproj", "{EE1FBBFC-7E2F-4401-A7C0-9BB60C8DEB06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delux.Services.ProductAPI", "Delux.Services.ProductAPI\Delux.Services.ProductAPI.csproj", "{EE1FBBFC-7E2F-4401-A7C0-9BB60C8DEB06}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Delux.Services.identity", "Delux.Services.identity\Delux.Services.identity.fsproj", "{113177D6-4503-4A84-9250-D5C4F818DB23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{EE1FBBFC-7E2F-4401-A7C0-9BB60C8DEB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE1FBBFC-7E2F-4401-A7C0-9BB60C8DEB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE1FBBFC-7E2F-4401-A7C0-9BB60C8DEB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{113177D6-4503-4A84-9250-D5C4F818DB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113177D6-4503-4A84-9250-D5C4F818DB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113177D6-4503-4A84-9250-D5C4F818DB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113177D6-4503-4A84-9250-D5C4F818DB23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

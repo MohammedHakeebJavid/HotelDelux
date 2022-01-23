@@ -5,12 +5,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Mango.Web.Controllers
+
+namespace Delux.Web.Controllers
 {
     public class ProductController : Controller
     {
@@ -19,7 +16,6 @@ namespace Mango.Web.Controllers
         {
             _productService = productService;
         }
-
         public async Task<IActionResult> ProductIndex()
         {
             List<ProductDto> list = new();
