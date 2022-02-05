@@ -7,7 +7,8 @@ namespace Delux.Services.ProductAPI.Repository
     {
         Task<IEnumerable<ProductDto>> GetProducts();
         Task<ProductDto> GetProductById(int productId);
-        Task<ProductDto> CreateUpdateProduct(ProductDto productDto);
+        Task<ProductDto> CreateProduct(ProductDto productDto);
+        Task<ProductDto> UpdateProduct(ProductDto productDto);
         Task<bool> DeleteProduct(int productId);
     }
 }
