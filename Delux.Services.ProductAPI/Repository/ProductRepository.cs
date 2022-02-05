@@ -15,24 +15,17 @@ namespace Delux.Services.ProductAPI.Repository
         public ProductRepository(ApplicationDbContext db, IMapper mapper)
         {
             _db = db;
-
             _mapper = mapper;
         }
 
-        public async Task<ProductDto> CreateUpdateProduct(ProductDto productDto)
+        public async Task<ProductDto> CreateProduct(ProductDto productDto)
         {
             Product product = _mapper.Map<ProductDto, Product>(productDto);
-            if (product.ProductId > 0)
-            {
-                _db.Products.Update(product);
-            }
-            else
-            {
-                _db.Products.Add(product);
-            }
+            _db.Products.Add(product);
             await _db.SaveChangesAsync();
             return _mapper.Map<Product, ProductDto>(product);
         }
+      
 
         public async Task<bool> DeleteProduct(int productId)
         {
@@ -64,6 +57,15 @@ namespace Delux.Services.ProductAPI.Repository
             List<Product> productList = await _db.Products.ToListAsync();
             return _mapper.Map<List<ProductDto>>(productList);
 
+        }
+
+        public async Task<ProductDto> UpdateProduct(ProductDto productDto)
+        {
+            Product product = _mapper.Map<ProductDto, Product>(productDto);
+            _db.Products.Update(product);
+            await _db.SaveChangesAsync();
+            return _mapper.Map<Product, ProductDto>(product);
+            
         }
     }
 }

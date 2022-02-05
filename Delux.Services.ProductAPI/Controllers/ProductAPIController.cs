@@ -55,12 +55,12 @@ namespace Delux.Services.ProductAPI.Controllers
 
 
         [HttpPost]
-        [Authorize]
+       // [Authorize]
         public async Task<object> Post([FromBody] ProductDto productDto)
         {
             try
             {
-                ProductDto model = await _productRepository.CreateUpdateProduct(productDto);
+                ProductDto model = await _productRepository.CreateProduct(productDto);
                 _response.Result = model;
             }
             catch (Exception ex)
@@ -74,12 +74,12 @@ namespace Delux.Services.ProductAPI.Controllers
 
 
         [HttpPut]
-        [Authorize]
+       // [Authorize]
         public async Task<object> Put([FromBody] ProductDto productDto)
         {
             try
             {
-                ProductDto model = await _productRepository.CreateUpdateProduct(productDto);
+                ProductDto model = await _productRepository.UpdateProduct(productDto);
                 _response.Result = model;
             }
             catch (Exception ex)
@@ -92,8 +92,8 @@ namespace Delux.Services.ProductAPI.Controllers
         }
 
         [HttpDelete]
-        [Authorize(Roles ="Admin")]
         [Route("{id}")]
+        // [Authorize(Roles ="Admin")]
         public async Task<object> Delete(int id)
         {
             try
