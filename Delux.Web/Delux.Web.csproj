@@ -31,8 +31,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Delux.Services.ProductAPI\Delux.Services.ProductAPI.csproj" />
-  </ItemGroup>
-
 </Project>

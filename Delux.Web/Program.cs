@@ -1,5 +1,3 @@
-using Delux.Services.ProductAPI;
-
 
 namespace Delux.Web
 {

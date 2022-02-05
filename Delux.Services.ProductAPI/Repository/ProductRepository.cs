@@ -15,6 +15,7 @@ namespace Delux.Services.ProductAPI.Repository
         public ProductRepository(ApplicationDbContext db, IMapper mapper)
         {
             _db = db;
+
             _mapper = mapper;
         }
 
@@ -35,7 +36,8 @@ namespace Delux.Services.ProductAPI.Repository
 
         public async Task<bool> DeleteProduct(int productId)
         {
-            try{
+            try
+            {
                 Product product = await _db.Products.FirstOrDefaultAsync(u => u.ProductId == productId);
                 if (product == null)
                 {

@@ -19,38 +19,18 @@ namespace Delux.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<IProductService, ProductService>();
-            services.AddHttpClient<ICartService, CartService>();
-            services.AddHttpClient<ICouponService, CouponService>();
+            //services.AddHttpClient<ICartService, CartService>();
+            //services.AddHttpClient<ICouponService, CouponService>();
+
             SD.ProductAPIBase = Configuration["ServiceUrls:ProductAPI"];
-            SD.ShoppingCartAPIBase = Configuration["ServiceUrls:ShoppingCartAPI"];
-            SD.CouponAPIBase = Configuration["ServiceUrls:CouponAPI"];
+            //SD.ShoppingCartAPIBase = Configuration["ServiceUrls:ShoppingCartAPI"];
+            //SD.CouponAPIBase = Configuration["ServiceUrls:CouponAPI"];
 
             services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<ICartService, CartService>();
-            services.AddScoped<ICouponService, CouponService>();
+            //services.AddScoped<ICartService, CartService>();
+            //services.AddScoped<ICouponService, CouponService>();
             services.AddControllersWithViews();
 
-            services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = "Cookies";
-                options.DefaultChallengeScheme = "oidc";
-            })
-                .AddCookie("Cookies", c => c.ExpireTimeSpan = TimeSpan.FromMinutes(10));
-                //.AddOpenIdConnect("oidc", options =>
-                //{
-                //    options.Authority = Configuration["ServiceUrls:IdentityAPI"];
-                //    options.GetClaimsFromUserInfoEndpoint = true;
-                //    options.ClientId = "mango";
-                //    options.ClientSecret = "secret";
-                //    options.ResponseType = "code";
-                //    options.ClaimActions.MapJsonKey("role", "role", "role");
-                //    options.ClaimActions.MapJsonKey("sub", "sub", "sub");
-                //    options.TokenValidationParameters.NameClaimType = "name";
-                //    options.TokenValidationParameters.RoleClaimType = "role";
-                //    options.Scope.Add("mango");
-                //    options.SaveTokens = true;
-
-                //});
 
         }
 
