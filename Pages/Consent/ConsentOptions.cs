@@ -2,7 +2,7 @@
 // See LICENSE in the project root for license information.
 
 
-namespace IdentityServerHost.Pages.Consent;
+namespace _net.Pages.Consent;
 
 public class ConsentOptions
 {

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IdentityServerHost.Pages.Redirect;
+namespace _net.Pages.Redirect;
 
 [AllowAnonymous]
 public class IndexModel : PageModel

@@ -1,6 +1,6 @@
 using System;
 
-namespace IdentityServerHost.Pages.Login;
+namespace _net.Pages.Login;
 
 public class LoginOptions
 {
