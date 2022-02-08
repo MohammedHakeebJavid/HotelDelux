@@ -1,17 +1,12 @@
 using AutoMapper;
 using Delux.Services.ShoppingCartAPI.DbContexts;
+using Delux.Services.ShoppingCartAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Delux.Services.ShoppingCartAPI
 {
@@ -35,18 +30,18 @@ namespace Delux.Services.ShoppingCartAPI
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
             services.AddSingleton(mapper);
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            //services.AddScoped<ICartRepository, CartRepository>();
-            //services.AddScoped<ICouponRepository, CouponRepository>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<ICouponRepository, CouponRepository>();
             //services.AddSingleton<IMessageBus, AzureServiceBusMessageBus>();
             //services.AddSingleton<IRabbitMQCartMessageSender, RabbitMQCartMessageSender>();
             services.AddControllers();
-            //services.AddHttpClient<ICouponRepository, CouponRepository>(u => u.BaseAddress =
-            //  new Uri(Configuration["ServiceUrls:CouponAPI"]));
+            services.AddHttpClient<ICouponRepository, CouponRepository>(u => u.BaseAddress =
+              new Uri(Configuration["ServiceUrls:CouponAPI"]));
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
 
-                    options.Authority = "https://localhost:7173/";
+                    options.Authority = "https://localhost:7077/";
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateAudience = false
