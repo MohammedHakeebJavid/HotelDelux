@@ -34,17 +34,17 @@ namespace Delux.Web.Controllers
             return View(list);
         }
 
-        //[Authorize]
-        //public async Task<IActionResult> Details(int productId)
-        //{
-        //    ProductDto model = new();
-        //    var response = await _productService.GetProductByIdAsync<ResponseDto>(productId,"");
-        //    if (response != null && response.IsSuccess)
-        //    {
-        //        model = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(response.Result));
-        //    }
-        //    return View(model);
-        //}
+        [Authorize]
+        public async Task<IActionResult> Details(int productId)
+        {
+            ProductDto model = new();
+            var response = await _productService.GetProductByIdAsync<ResponseDto>(productId);
+            if (response != null && response.IsSuccess)
+            {
+                model = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(response.Result));
+            }
+            return View(model);
+        }
 
         public IActionResult Privacy()
         {
@@ -63,7 +63,6 @@ namespace Delux.Web.Controllers
             
             return RedirectToAction(nameof(Index));
         }
-
         public IActionResult Logout()
         {
             return SignOut("Cookies", "oidc");

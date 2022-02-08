@@ -19,6 +19,7 @@ namespace Delux.Services.ProductAPI.Controllers
             this._response = new ResponseDto();
         }
         [HttpGet]
+        [Authorize]
         public async Task<object> Get()
         {
             try
@@ -36,6 +37,7 @@ namespace Delux.Services.ProductAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         [Route("{id}")]
         public async Task<object> Get(int id)
         {
@@ -55,7 +57,7 @@ namespace Delux.Services.ProductAPI.Controllers
 
 
         [HttpPost]
-       // [Authorize]
+        [Authorize]
         public async Task<object> Post([FromBody] ProductDto productDto)
         {
             try
@@ -74,7 +76,7 @@ namespace Delux.Services.ProductAPI.Controllers
 
 
         [HttpPut]
-       // [Authorize]
+        [Authorize]
         public async Task<object> Put([FromBody] ProductDto productDto)
         {
             try
@@ -92,8 +94,8 @@ namespace Delux.Services.ProductAPI.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         [Route("{id}")]
-        // [Authorize(Roles ="Admin")]
         public async Task<object> Delete(int id)
         {
             try

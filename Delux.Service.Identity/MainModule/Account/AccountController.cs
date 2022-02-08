@@ -18,10 +18,10 @@ using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
 using Duende.IdentityServer.Test;
 using Microsoft.AspNetCore.Identity;
-using Mango.Services.Identity.Models;
 using Mango.Services.Identity.MainModule.Account;
 using System.Collections.Generic;
 using System.Security.Claims;
+using Delux.Services.Identity.Models;
 
 namespace IdentityServerHost.Quickstart.UI
 {
