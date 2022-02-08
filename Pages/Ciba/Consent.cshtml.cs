@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace IdentityServerHost.Pages.Ciba;
+namespace _net.Pages.Ciba;
 
 [Authorize]
 [SecurityHeadersAttribute]

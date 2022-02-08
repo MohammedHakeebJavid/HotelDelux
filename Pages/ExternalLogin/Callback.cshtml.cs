@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace IdentityServerHost.Pages.ExternalLogin;
+namespace _net.Pages.ExternalLogin;
 
 [AllowAnonymous]
 [SecurityHeaders]

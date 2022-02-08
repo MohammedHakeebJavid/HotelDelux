@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace IdentityServerHost.Pages.Device;
+namespace _net.Pages.Device;
 
 public class InputModel
 {

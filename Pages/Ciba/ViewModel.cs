@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace IdentityServerHost.Pages.Ciba;
+namespace _net.Pages.Ciba;
 
 public class ViewModel
 {
