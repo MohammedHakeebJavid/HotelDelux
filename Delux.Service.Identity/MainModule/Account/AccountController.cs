@@ -5,23 +5,19 @@
 using IdentityModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Duende.IdentityServer;
+
 using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Extensions;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
-using Duende.IdentityServer.Test;
+
 using Microsoft.AspNetCore.Identity;
-using Mango.Services.Identity.MainModule.Account;
-using System.Collections.Generic;
+
 using System.Security.Claims;
 using Delux.Services.Identity.Models;
+using Delux.Services.Identity.MainModule.Account;
 
 namespace IdentityServerHost.Quickstart.UI
 {

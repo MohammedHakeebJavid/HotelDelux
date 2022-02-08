@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mango.Services.Identity
+namespace Delux.Services.Identity
 {
     public class Program
     {

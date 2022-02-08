@@ -2,11 +2,13 @@ using Delux.Services.Identity;
 using Delux.Services.Identity.DbContexts;
 using Delux.Services.Identity.Initializer;
 using Delux.Services.Identity.Models;
+using Delux.Services.Identity.Services;
+using Duende.IdentityServer.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Mango.Services.Identity
+namespace Delux.Services.Identity
 {
     public class Startup
     {
@@ -38,7 +40,7 @@ namespace Mango.Services.Identity
             .AddAspNetIdentity<ApplicationUser>();
 
             services.AddScoped<IDbInitializer, DbInitializer>();
-            //services.AddScoped<IProfileService, ProfileService>();
+            services.AddScoped<IProfileService, ProfileService>();
             builder.AddDeveloperSigningCredential();
 
             services.AddControllersWithViews();
