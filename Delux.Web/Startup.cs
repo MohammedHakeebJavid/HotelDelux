@@ -18,9 +18,12 @@ namespace Delux.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<IProductService, ProductService>();
-   
-
+           // services.AddHttpClient<ICartService, CartService>();
+           // services.AddHttpClient<ICouponService, CouponService>();
             SD.ProductAPIBase = Configuration["ServiceUrls:ProductAPI"];
+            SD.ShoppingCartAPIBase = Configuration["ServiceUrls:ShoppingCartAPI"];
+
+
 
             services.AddScoped<IProductService, ProductService>();
   
